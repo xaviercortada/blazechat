@@ -49,8 +49,3 @@ def runServer():
                     input.remove(s)
     server.close()
 
-
-
-if __name__ == '__main__':
-    runServer()
-
