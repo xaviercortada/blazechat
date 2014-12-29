@@ -9,9 +9,9 @@ import os
 
 def runServer():
 
-    host = os.getenv("OPENSHIFT_INTERNAL_IP")
+    host = os.getenv['OPENSHIFT_INTERNAL_IP']
     '''hello'''
-    port = 20000
+    port = int(os.environ['OPENSHIFT_PYTHON_PORT'])
     backlog = 5
     size = 1024
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
