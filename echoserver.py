@@ -4,13 +4,14 @@ __author__ = 'xavier cortada'
 # echo_server.py
 import socket
 import select
-import sys
+import os
+
 
 def runServer():
 
-    host = ''
+    host = os.getenv("OPENSHIFT_INTERNAL_IP")
     '''hello'''
-    port = 50000
+    port = 20000
     backlog = 5
     size = 1024
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -37,7 +38,7 @@ def runServer():
                 running = 0
 
             else:
-                # handle all other sockets
+                # handle all other   sockets
                 data = s.recv(size)
                 if data:
                     if data == 'essssfdfdfxit':
