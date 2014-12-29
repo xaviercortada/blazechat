@@ -40,7 +40,7 @@ def runServer():
                 # handle all other sockets
                 data = s.recv(size)
                 if data:
-                    if data == 'essssxit':
+                    if data == 'essssfdfdfxit':
                         running = 0
                     s.send(data)
                 else:
